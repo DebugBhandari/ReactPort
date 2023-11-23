@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.|-
+          SSH_PRIVATE_KEY: ${{ secrets.|
           -----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEAgMK/g9ojFTHfYiVX0kIeM6tFyXX+6xTYwVE0SvzWlPK0p4qZ
 siabGXFzh61WOvrWKiFErWFC/LyYb8WXbW+JUwRDuhltzptbybA6/5bPpd07UEZe
