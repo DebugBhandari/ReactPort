@@ -30,12 +30,7 @@ jobs:
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.
-            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-            QyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlgAAAKBAR3Z9QEd2
-            fQAAAAtzc2gtZWQyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlg
-            AAAEALHf4MQ64u/Y/n+SqbGdz5Y2sJamkP0EwY8xzMjjCI9iT4IkYVU/uynThABT/3ZtO9
-            8NmLeFKYbllEDqUegE6WAAAAF2RlZXBiaGZvcmV2ZXJAZ21haWwuY29tAQIDBAUG
+          SSH_PRIVATE_KEY: ${{ secrets.b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlgAAAKBAR3Z9QEd2fQAAAAtzc2gtZWQyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlgAAAEALHf4MQ64u/Y/n+SqbGdz5Y2sJamkP0EwY8xzMjjCI9iT4IkYVU/uynThABT/3ZtO98NmLeFKYbllEDqUegE6WAAAAF2RlZXBiaGZvcmV2ZXJAZ21haWwuY29tAQIDBAUG
              }}
           REMOTE_HOST: ${{ secrets.13.53.194.244 }}
           REMOTE_USER: ${{ secrets.ubuntu }}
