@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(2, 2, 2);
+  margin: 4px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+.glowBoy {
+  position: fixed;
+  top: 80%;
+  left: 80%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: -50;
+  opacity: 70%;
+  box-shadow:
+    0 0 120px 100px #ede58e, 
+    0 0 180px 120px rgb(223, 229, 139),
+    0 0 240px 200px rgb(246, 255, 0);
+}
+
+button {
+  border: 2px solid white;
+  padding: 6px 10px 6px 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: white;
+  background-color: transparent;
+  min-width: 80px;
+
+}
+
+button:hover{
+  box-shadow: 0 0 10px 10px #ffef08;
+}
+
+.navbtns{
+  display: flex;
+  justify-content: space-between;
+  min-width: 200px;
+}
