@@ -1,0 +1,44 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CD React Portfolio
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      #
+        
+      - name: Deploy to Server 1
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlgAAAKBAR3Z9QEd2
+fQAAAAtzc2gtZWQyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlg
+AAAEALHf4MQ64u/Y/n+SqbGdz5Y2sJamkP0EwY8xzMjjCI9iT4IkYVU/uynThABT/3ZtO9
+8NmLeFKYbllEDqUegE6WAAAAF2RlZXBiaGZvcmV2ZXJAZ21haWwuY29tAQIDBAUG }}
+          REMOTE_HOST: ${{ secrets.13.53.194.244 }}
+          REMOTE_USER: ${{ secrets.ubuntu }}
+          SOURCE: "ReactPort/build/"
+          TARGET: ${{ secrets./var/www/debugbhandari.link/build }}
+          
+
