@@ -30,7 +30,9 @@ jobs:
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.MIIEowIBAAKCAQEAgMK/g9ojFTHfYiVX0kIeM6tFyXX+6xTYwVE0SvzWlPK0p4qZ
+          SSH_PRIVATE_KEY: |-
+          -----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAgMK/g9ojFTHfYiVX0kIeM6tFyXX+6xTYwVE0SvzWlPK0p4qZ
 siabGXFzh61WOvrWKiFErWFC/LyYb8WXbW+JUwRDuhltzptbybA6/5bPpd07UEZe
 dkRgh1XO65SiuuUADLtsw8s9VaxCp2D5vh8kAZyiYrn2y/PIe/s0d0tBwH60PbZe
 UbyJJ4cwFxzLfwW3oe9DmvE7B2Woo0r5U/x1i3n8Im7buFRy/OLNwBPcCBxHmBCS
@@ -54,10 +56,11 @@ puWO3mT2VrnOZHMIAIVYQvYciBVTqhvQJUiQYVnpkNUKtbVZcpV6CxDg+Su91CGX
 RoR5ee4zT4MEOhQN2+v3Qy8FpQ3w58PrzYCtaEzwmgXMcZxnE7bHomLe4FsCTYJ0
 pSABAoGBAJuuv8N9e6VWhjefnJNWuk6hcDWqKE2Il7Qtv3TUkb/d/5S2roTwfbLU
 a8BbUF5JJjWt79Wp4OJpuV38qMrPaqBdAOXVmOD2YEV5J0/slMYueNck3DdE9JGM
-bEREN2elaaJFNPwNUM8Z2qMRJlrsNeHkwx70p3Z0xwu7nlZ5rbQ8}}
-          REMOTE_HOST: ${{ secrets.ec2-13-53-194-244.eu-north-1.compute.amazonaws.com }}
-          REMOTE_USER: ${{ secrets.ubuntu }}
+bEREN2elaaJFNPwNUM8Z2qMRJlrsNeHkwx70p3Z0xwu7nlZ5rbQ8
+-----END RSA PRIVATE KEY-----
+          REMOTE_HOST: ec2-13-53-194-244.eu-north-1.compute.amazonaws.com
+          REMOTE_USER: ubuntu
           SOURCE: "ReactPort/build/"
-          TARGET: ${{ secrets./var/www/debugbhandari.link/build }}
+          TARGET: /var/www/debugbhandari.link/build
           EXCLUDE: "/.github/, /node_modules/, /public/, /src/, /package.json/, /package-lock.json/, /Readme.md/"
           
