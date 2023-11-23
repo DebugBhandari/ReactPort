@@ -32,7 +32,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlgAAAKBAR3Z9QEd2fQAAAAtzc2gtZWQyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlgAAAEALHf4MQ64u/Y/n+SqbGdz5Y2sJamkP0EwY8xzMjjCI9iT4IkYVU/uynThABT/3ZtO98NmLeFKYbllEDqUegE6WAAAAF2RlZXBiaGZvcmV2ZXJAZ21haWwuY29tAQIDBAUG
              }}
-          REMOTE_HOST: ${{ secrets.13.53.194.244 }}
+          REMOTE_HOST: ${{ secrets.ec2-13-53-194-244.eu-north-1.compute.amazonaws.com }}
           REMOTE_USER: ${{ secrets.ubuntu }}
           SOURCE: "ReactPort/build/"
           TARGET: ${{ secrets./var/www/debugbhandari.link/build }}
