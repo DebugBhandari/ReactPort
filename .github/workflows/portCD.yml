@@ -42,5 +42,5 @@ jobs:
           REMOTE_USER: ${{ secrets.ubuntu }}
           SOURCE: "ReactPort/build/"
           TARGET: ${{ secrets./var/www/debugbhandari.link/build }}
-          EXCLUDE: "/.github/, /node_modules/, /public /, / src/, /package.json /, / package-lock.json/, / Readme.md/
+          EXCLUDE: "/.github/, /node_modules/, /public/, /src/, /package.json/, /package-lock.json/, /Readme.md/
           
