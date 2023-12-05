@@ -30,37 +30,10 @@ jobs:
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.|
-          -----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAgMK/g9ojFTHfYiVX0kIeM6tFyXX+6xTYwVE0SvzWlPK0p4qZ
-siabGXFzh61WOvrWKiFErWFC/LyYb8WXbW+JUwRDuhltzptbybA6/5bPpd07UEZe
-dkRgh1XO65SiuuUADLtsw8s9VaxCp2D5vh8kAZyiYrn2y/PIe/s0d0tBwH60PbZe
-UbyJJ4cwFxzLfwW3oe9DmvE7B2Woo0r5U/x1i3n8Im7buFRy/OLNwBPcCBxHmBCS
-UWc4g+5KAn7aNLV372ytTZWznu+S+JGficE0uToVbXpyO4BYRAv8dQ4TAxHu8zcG
-PyT3L9EvYolyvXXu01HO1CE7Ng9JmA2UEsfSAwIDAQABAoIBAH+hizjlRxVBRE4C
-+hRemZVZ1mkl3zOijGDDX3RdP06RbeUNC+B9SAxmWsBIX0tDTHqiU3MRD9d6Ehfo
-4nsFrjdt6LxVbHT5png7iZ/EG7wrmRmvRv8wNAayVdNKmCttxyjXt640jW2YvNEw
-3R1JvOUkIAqAj1QHJ9lNXepJ3Lky9okH4reusj0ii82KZ/oag97FvCW9aD5gvnd1
-2Go+nm6/sUIeHMEUrv1/AEQrGdrUARX5PoLvk7ky3cneuY586/HJYilGq9Cc7aQr
-HDks/YibnuNwVHszcQGnx8AapHh/LYTXTYZPNEFQxVPNAODOp11oNeqCMmFnuWFC
-fR6loAECgYEAvy06vFhkD4PNzNwcL5xR4il18te4tmGPBXEUeUrs1CZhYvLg2296
-HDULitIWRYXg52247+wR4FYoBdu5V+NthntVPqTY3awj0JwvxVe++MY8M/0bNLHg
-5F6eYgEaXREuZ4ncjHqBJaaqkZyqNNG3+29G/fgQsvFgawL/CUbb2gMCgYEArGub
-h774K8lU7QnoUehR7/6ok9AVztZmiP9D9FO3/jfbCSTGdgGdK46/QVdCQHFTnJfa
-2iAcCwoJjAUtrHKIBLCDlTSBY5EL18tX5XsGvVeEHu8yYwwyTPMBQh4Amka2EXbf
-+LmwiX0WixdpvcifrVbpzYPYngHS2nrf9/2eqAECgYBurgrRPANCEDa3ob8XuVKW
-sxY8L7QassSQi/Uke8I82LONC7wujo2NgxBZoGOQgH/CvH1TOcLntDmbmqflQCAK
-uaCSkfGT9LMPdT0a7T/82xfDqYd0rH7c+AKODsFqnCXXf7MWCV53o9QgVSkdR0VS
-5gudwV45mxENI0Dv5/wkbQKBgA/21qu27tt/BLH93NjYnd2OwqUM+zfvegbtO6l/
-puWO3mT2VrnOZHMIAIVYQvYciBVTqhvQJUiQYVnpkNUKtbVZcpV6CxDg+Su91CGX
-RoR5ee4zT4MEOhQN2+v3Qy8FpQ3w58PrzYCtaEzwmgXMcZxnE7bHomLe4FsCTYJ0
-pSABAoGBAJuuv8N9e6VWhjefnJNWuk6hcDWqKE2Il7Qtv3TUkb/d/5S2roTwfbLU
-a8BbUF5JJjWt79Wp4OJpuV38qMrPaqBdAOXVmOD2YEV5J0/slMYueNck3DdE9JGM
-bEREN2elaaJFNPwNUM8Z2qMRJlrsNeHkwx70p3Z0xwu7nlZ5rbQ8
------END RSA PRIVATE KEY-----}}
-          REMOTE_HOST: ${{ secrets.ec2-13-53-194-244.eu-north-1.compute.amazonaws.com}}
-          REMOTE_USER: ${{ secrets.ubuntu}}
-          SOURCE: "ReactPort/build/"
-          TARGET: ${{ secrets./var/www/debugbhandari.link/build}}
-          EXCLUDE: "/.github/, /node_modules/, /public/, /src/, /package.json/, /package-lock.json/, /Readme.md/"
-          
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          EXCLUDE: "/.github/, /node_modules/, /public /, / src/, /package.json /, / package-lock.json/, / Readme.md/"
