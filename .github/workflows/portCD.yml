@@ -30,17 +30,10 @@ jobs:
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.-----BEGIN OPENSSH PRIVATE KEY-----
-            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-            QyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlgAAAKBAR3Z9QEd2
-            fQAAAAtzc2gtZWQyNTUxOQAAACAk+CJGFVP7sp04QAU/92bTvfDZi3hSmG5ZRA6lHoBOlg
-            AAAEALHf4MQ64u/Y/n+SqbGdz5Y2sJamkP0EwY8xzMjjCI9iT4IkYVU/uynThABT/3ZtO9
-            8NmLeFKYbllEDqUegE6WAAAAF2RlZXBiaGZvcmV2ZXJAZ21haWwuY29tAQIDBAUG
-            -----END OPENSSH PRIVATE KEY-----
-             }}
-          REMOTE_HOST: ${{ secrets.13.53.194.244 }}
-          REMOTE_USER: ${{ secrets.ubuntu }}
-          SOURCE: "ReactPort/build/"
-          TARGET: ${{ secrets./var/www/debugbhandari.link/build }}
-          EXCLUDE: "/.github/, /node_modules/, /public /, / src/, /package.json /, / package-lock.json/, / Readme.md/
-          
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          EXCLUDE: "/.github/, /node_modules/, /public /, / src/, /package.json /, / package-lock.json/, / Readme.md/"

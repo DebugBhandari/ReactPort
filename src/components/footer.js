@@ -1,12 +1,14 @@
-import React from "react"
+import React from "react";
+
 
 import "./index.css"
 
 export const Footer = () => {
 
   return (
-    <footer className="footer-main">
-      <p>Copyright @DebugBhandari.link</p>
-    </footer>
+    <div className="footer-main">
+      <p className="header">Copyright @DebugBhandari.link</p>
+     
+    </div>
   )
 }

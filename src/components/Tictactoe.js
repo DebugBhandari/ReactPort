@@ -26,13 +26,12 @@ function Board({ xIsNext, squares, onPlay}) {
   }
 
   const winner = calculateWinner(squares);
-  let status;
+  
   if (winner) {
     setStateus('Winner: ' + winner);
   } else {
     setStateus('Next player: ' + (xIsNext ? 'X' : 'O'));
   }
-  
 
   return (
     <>
@@ -56,17 +55,21 @@ function Board({ xIsNext, squares, onPlay}) {
   );
 }
 
-export default function Tictactoe({updateTTTdata}) {
+export default function Tictactoe() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
+  const {stateus, setStateus} = useContext(StatusContext);
   
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
+  }
+  const reStart=()=>{
+    setCurrentMove(0);
   }
 
   return (
@@ -75,7 +78,8 @@ export default function Tictactoe({updateTTTdata}) {
         <Board  xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
-       
+        {stateus.slice(0,6)==='Winner'?
+      <button onClick={()=>reStart()}>Restart</button>:null}
       </div>
     </div>
   );

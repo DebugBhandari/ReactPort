@@ -54,11 +54,11 @@ export const data =
       "projects": [
         
         {
-          "title": "Full-stack E-commerce clothing store",
+          "title": "Full-stack E-commerce store",
           "description":
-            "Built as self-asessment as well as to accompany my younger brothers online clothing store idea.",
+            "Built as asessment as well as to accompany my younger brothers online clothing store idea.",
           "tools": 
-            "Typescript, React, Express, Postgres, REST, Axios, Redux, Saga, Typeorm, Jest, Docker, Oauth"
+            "Typescript, React, Express, REST, Axios, Redux, Saga,  Jest, Docker, Oauth"
           ,
           "demo":"https://hub.docker.com/repository/docker/deepakbhandaridev/boujie-apparels",
           "imageUrl": "https://drive.google.com/uc?export=view&id=1mW9Z1H_78zJ_oLLm2MX4EFKbFsBh9dGe",

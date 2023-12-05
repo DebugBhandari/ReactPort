@@ -1,9 +1,22 @@
-body {
+ body {
   background-color: rgb(2, 2, 2);
-  margin: 4px;
+  
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
+}
+.App{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .glowBoy {
   position: fixed;
@@ -22,7 +35,7 @@ body {
 }
 
 button {
-  border: 2px solid white;
+  border: 2px solid  #ffef08;
   padding: 6px 10px 6px 10px;
   font-weight: bold;
   border-radius: 8px;
@@ -34,10 +47,18 @@ button {
 
 button:hover{
   box-shadow: 0 0 10px 10px #ffef08;
+  color: #ffef08;
 }
 
-.navbtns{
-  display: flex;
-  justify-content: space-between;
-  min-width: 200px;
+
+
+.logoBG{
+  z-index: -9;
+  height: 220px;
+  width: 220px;
+  transform:rotate(70deg);
+  position: absolute;
+  filter: contrast(0%) brightness(0%);
+  bottom: 10%;
+  right: 20%;
 }

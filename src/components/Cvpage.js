@@ -5,8 +5,7 @@ export const Cvpage = () => {
   const data = useContext(JsonContext);
   return (
     <div className="cvPage">
-      <div className="introdiv">
-        <h2 className="nameme">{data.name}</h2> </div>
+      <div className="introdiv"> </div>
 
         <div className="typewriter">
         <p> {data.name}, Metropolia UAS,</p>
@@ -17,18 +16,18 @@ export const Cvpage = () => {
 
      
       <div className="cvsec">
-        <h2>Skills:</h2>
+        <h2 className="">Skills:</h2>
         <div className="schools">
-          <h4>Frontend</h4>
+          <h4 className="header">Frontend</h4>
         {data.skills[0].join(', ')}</div>
         <div className="schools">
-          <h4>Backend</h4>
+          <h4 className="header" >Backend</h4>
         {data.skills[1].join(', ')}</div>
         <div className="schools">
-          <h4>Databases</h4>
+          <h4 className="header">Databases</h4>
         {data.skills[2].join(', ')}</div>
         <div className="schools">
-          <h4>Miscellaneous</h4>
+          <h4 className="header">Miscellaneous</h4>
         {data.skills[3].join(', ')}</div>
        
         
@@ -38,7 +37,7 @@ export const Cvpage = () => {
         
         {data.education.map((schools) => (
           <div className="schools" key={schools.title}>
-            <h4>{schools.organization}</h4>
+            <h4 className="header">{schools.organization}</h4>
             
             <p>
               {schools.title + " " + schools.address + " " + schools.graduation}

@@ -7,6 +7,9 @@ import { data } from "./assets/data.js";
 
 import { Landing } from "./components/Landing";
 import { Cvpage } from "./components/Cvpage";
+import { Contact } from "./components/Contact";
+
+import logo from "./assets/logoDB.png";
 
 export const JsonContext = React.createContext({});
 
@@ -20,10 +23,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/CV" element={<Cvpage />} />
+            <Route path="/Contact" element={<Contact />} />
           </Routes>
           <Footer />
         </JsonContext.Provider>
       </BrowserRouter>
+      <img className="logoBG" src={logo} alt="logo" />
     </div>
   );
 }
