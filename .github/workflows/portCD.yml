@@ -31,7 +31,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO"
-          SOURCE: "ReactPort/build"
+          SOURCE: "build"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           EXCLUDE: "/.github/, /node_modules/, /public /, / src/, /package.json /, / package-lock.json/, / Readme.md/"
