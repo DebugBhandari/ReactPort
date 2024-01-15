@@ -14,25 +14,30 @@ export const NavBar = () => {
     setInValue(!inValue);
   };
  
+  const imgStyle = {
+  width:'60px',
+  height:'50px',
+  borderRadius: '10px'
+  }
  
   console.log(inValue);
   return (
     <div className="nav_bar">
-      <div className="imgdiv">
+      <div className="imgDiv">
         <Link to="/">
           {" "}
-          <img className="logoDB" src={logo} alt="logo" />
+          <img className="logoDB" src={logo} style={imgStyle} alt="logo" />
         </Link>
-      </div>
+        </div>
 
       <div className="menu-wrap">
-        <input type="checkbox" className="toggler" checked={inValue} onClick={(e)=>inputHandler(e)}/>
+        <input type="checkbox" className="toggler"  onChange={(e)=>inputHandler(e)} checked={inValue}/>
         <div className="hamburger">
           <div></div>
         </div>
         <div className="menu">
           <div className="">
-            <div className="mbl-menu">
+            <div className="mbl-menu header1">
               <ul>
                 <li>
                   <Link to="/" onClick={(e)=>inputHandler(e)}>
@@ -48,7 +53,7 @@ export const NavBar = () => {
                 <li>
                   <Link to="/Contact" onClick={(e)=>inputHandler(e)}>
                     {" "}
-                    Hello
+                    Socials
                   </Link>
                 </li>
               </ul>
@@ -58,13 +63,13 @@ export const NavBar = () => {
       </div>
       <div className="navbtns">
         <Link to="/">
-          <button>Landing</button>
+          <button className="button1">Landing</button>
         </Link>
         <Link to="/Cv">
-          <button>Edu.</button>
+          <button className="button1">Edu.</button>
         </Link>
         <Link to="/Contact">
-          <button>Hello</button>
+          <button className="button1">Socials</button>
         </Link>
       </div>
     </div>

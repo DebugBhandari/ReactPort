@@ -46,7 +46,7 @@ export const Contact = () => {
         <input id="email" type="email" name="email" required />
         <label htmlFor="message">Message:</label>
         <textarea id="message" name="message"></textarea>
-        <button className="buttons"type="submit" disabled={serverState.submitting}>
+        <button className="button1"type="submit" disabled={serverState.submitting}>
           Submit
         </button>
         {serverState.status && (
@@ -61,8 +61,10 @@ export const Contact = () => {
       <div className="float">
       <a href="https://www.linkedin.com/in/debugbhandari/"><FontAwesomeIcon className="faIcon" icon={icon({name:'linkedin', style:'brands'})} /></a>
   <a href="https://blog.debugbhandari.link/"><FontAwesomeIcon className="faIcon" icon={icon({name:'blogger', style:'brands'})} /></a>
-  <a href="https://www.facebook.com/Deepbh/"><FontAwesomeIcon className="faIcon" icon={icon({name:'facebook', style:'brands'})} /></a>
+ 
   <a href="https://www.instagram.com/deepbh1/"><FontAwesomeIcon className="faIcon" icon={icon({name:'instagram', style:'brands'})}  /></a>
+  
+  <a href="https://github.com/DebugBhandari"><FontAwesomeIcon className="faIcon" icon={icon({name:'github', style:'brands'})}  /></a>
   
 </div>
       </div>

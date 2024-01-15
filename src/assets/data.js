@@ -61,14 +61,14 @@ export const data =
             "Typescript, React, Express, REST, Axios, Redux, Saga,  Jest, Docker, Oauth"
           ,
           "demo":"https://hub.docker.com/repository/docker/deepakbhandaridev/boujie-apparels",
-          "imageUrl": "https://drive.google.com/uc?export=view&id=1mW9Z1H_78zJ_oLLm2MX4EFKbFsBh9dGe",
+          "imageUrl": "ecom",
           "gitRepo": "https://github.com/DebugBhandari/EcommerceFullstack",
           "url": "https://ecom.debugbhandari.link/"
         },{
           "title": "Personal Blog",
           "description": "Blog about a blogging platform in a Caddy server using Ghost CMS in a free-tier AWS EC2 Linux instance.",
           "tools": "EC2, Ghost CMS, Caddy, AWS, Route53",
-          "imageUrl": "https://drive.google.com/uc?export=view&id=13yqOzLZJNoTtx2FLJ-G0p6oyh-NTuSCy",
+          "imageUrl": "blog",
           "gitRepo": "",
           "demo":"",
           "url": "https://blog.debugbhandari.link/"
@@ -77,7 +77,7 @@ export const data =
           "description":
             "Built to learn typescript and angular js. Responsive and service workers used to make it a Progressive Web App (PWA) with a standalone icon.",
           "tools": "Typescript, Angular, SASS, Formspree",
-          "imageUrl": "https://drive.google.com/uc?export=view&id=1wnPltiJdxqrDUwYP6E6nclwAbGTHYynq",
+          "imageUrl": "ngport",
           "gitRepo": "https://github.com/DebugBhandari/Angular-Portfolio",
           "demo":"",
           "url": "https://ng.debugbhandari.link/"
@@ -89,7 +89,7 @@ export const data =
           "description":
             "Built as Bachelors final year project to accompany my Thesis.",
           "tools": "React, Express, MongoDB, Axios, Redux, Oauth",
-          "imageUrl": "https://drive.google.com/uc?export=view&id=1XQ1olYpfZoDvAzD-Y5zM9v5j2YY4b01L",
+          "imageUrl": "vacay",
           "gitRepo": "https://github.com/DebugBhandari/FinalYear",
           "demo":"",
           "url": "https://thesisvac.herokuapp.com/"

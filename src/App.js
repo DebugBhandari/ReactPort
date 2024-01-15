@@ -28,7 +28,8 @@ function App() {
           <Footer />
         </JsonContext.Provider>
       </BrowserRouter>
-      <img className="logoBG" src={logo} alt="logo" />
+      {/* <img className="logoBG" src={logo} alt="logo" /> */}
+      <div className="logoBG"></div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react';
-import {StatusContext} from './Landing';
+import { useEffect, useState, useRef } from "react";
 
 function Square({ value, onSquareClick }) {
   return (
@@ -9,33 +8,40 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-function Board({ xIsNext, squares, onPlay}) {
-  const {stateus, setStateus} = useContext(StatusContext);
-  
+function Board({ xIsNext, squares, onPlay, setStat }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = 'X';
+      nextSquares[i] = "X";
     } else {
-      nextSquares[i] = 'O';
+      nextSquares[i] = "O";
     }
     onPlay(nextSquares);
   }
 
   const winner = calculateWinner(squares);
-  
-  if (winner) {
-    setStateus('Winner: ' + winner);
-  } else {
-    setStateus('Next player: ' + (xIsNext ? 'X' : 'O'));
-  }
 
+  let status;
+  if (winner) {
+    status = "Winner: " + winner;
+  } else if (!winner && squares[8] !== null) {
+    status = "Its a tie";
+  } else {
+    status = "Next player: " + (xIsNext ? "X" : "O");
+  }
+ 
+    
+
+    useEffect(() => {
+      setStat(status);
+    }, [status,setStat]);
+ 
+  
   return (
     <>
-     
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -51,6 +57,7 @@ function Board({ xIsNext, squares, onPlay}) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
+      <div className="header3" >{status}</div>
     </>
   );
 }
@@ -60,26 +67,35 @@ export default function Tictactoe() {
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
-  const {stateus, setStateus} = useContext(StatusContext);
-  
+  const [status, setStatus] = useState("");
+ 
+
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
   }
-  const reStart=()=>{
+  const reStart = () => {
     setCurrentMove(0);
-  }
+  };
 
   return (
     <div className="game">
       <div className="game-board">
-        <Board  xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+        <Board
+          xIsNext={xIsNext}
+          squares={currentSquares}
+          onPlay={handlePlay}
+          setStat={setStatus}
+        />
       </div>
       <div className="game-info">
-        {stateus.slice(0,6)==='Winner'?
-      <button onClick={()=>reStart()}>Restart</button>:null}
+        {status.slice(0, 6) === "Winner" || currentMove === 9 ? (
+          <button className="button1" onClick={() => reStart()}>
+            Restart
+          </button>
+        ) : null}
       </div>
     </div>
   );

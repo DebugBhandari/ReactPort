@@ -2,12 +2,17 @@
   background-color: rgb(2, 2, 2);
   
   color: white;
-  font-family: 'Courier New', Courier, monospace;
-  
+  font-family:  Courier, monospace;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-size: 18px;
+
+
 
 }
 .App{
@@ -17,6 +22,14 @@
   align-items: center;
   height: 100%;
   width: 100%;
+
+  animation: appSlide 1s ease-in-out;
+
+}
+@keyframes appSlide {
+  from{transform: translateY(-90%);}
+  to{transform: translateY(0%);
+ }
 }
 .glowBoy {
   position: fixed;
@@ -34,31 +47,35 @@
     0 0 240px 200px rgb(246, 255, 0);
 }
 
-button {
+.button1 {
   border: 2px solid  #ffef08;
   padding: 6px 10px 6px 10px;
-  font-weight: bold;
+  font-weight: 900;
   border-radius: 8px;
   color: white;
   background-color: transparent;
   min-width: 80px;
+  font-family:  Courier, monospace;
+  text-decoration: none;
 
 }
 
-button:hover{
+
+.button1:hover{
   box-shadow: 0 0 10px 10px #ffef08;
   color: #ffef08;
 }
 
 
-
 .logoBG{
+  background: url("./assets/logoDB.png");
+  background-size: cover;
   z-index: -9;
-  height: 220px;
-  width: 220px;
+  height: 250px;
+  width: 250px;
   transform:rotate(70deg);
   position: absolute;
   filter: contrast(0%) brightness(0%);
-  bottom: 10%;
-  right: 20%;
+  bottom: 0%;
+  right: 15%;
 }
