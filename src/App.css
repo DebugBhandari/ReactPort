@@ -42,17 +42,17 @@
   z-index: -50;
   opacity: 70%;
   box-shadow:
-    0 0 120px 100px #ede58e, 
-    0 0 180px 120px rgb(223, 229, 139),
-    0 0 240px 200px rgb(246, 255, 0);
+    0 0 60px 50px #ede58e, 
+    0 0 90px 60px rgb(223, 229, 139),
+    0 0 120px 100px rgb(246, 255, 0);
 }
 
 .button1 {
-  border: 2px solid  #ffef08;
+  border: none;
   padding: 6px 10px 6px 10px;
   font-weight: 900;
   border-radius: 8px;
-  color: white;
+  color: #ffef08;
   background-color: transparent;
   min-width: 80px;
   font-family:  Courier, monospace;
@@ -62,13 +62,13 @@
 
 
 .button1:hover{
-  box-shadow: 0 0 10px 10px #ffef08;
+ scale: 1.1;
   color: #ffef08;
 }
 
 
 .logoBG{
-  background: url("./assets/logoDB.png");
+  /* background: url("./assets/logoDB.png");
   background-size: cover;
   z-index: -9;
   height: 250px;
@@ -77,5 +77,6 @@
   position: absolute;
   filter: contrast(0%) brightness(0%);
   bottom: 0%;
-  right: 15%;
+  right: 15%; */
+  display: none;
 }

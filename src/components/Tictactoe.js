@@ -57,7 +57,7 @@ function Board({ xIsNext, squares, onPlay, setStat }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-      <div className="header3" >{status}</div>
+      <div  >{status}</div>
     </>
   );
 }

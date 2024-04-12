@@ -26,7 +26,7 @@ export const Landing = () => {
                 Nepali/Helsinki/English
               </p>
               <div className="tic">
-                <div className="tac header2">
+                <div className="tac header1">
                   TicTacToe!!! 
                  
                 </div>
@@ -38,13 +38,13 @@ export const Landing = () => {
           </div>
           <div className="projSide">
 
-          <div className="demoTxt"><p className="header3 ">Click on images for Demo</p></div>
+          <div className="demoTxt"><p className="header3 ">Projects</p></div>
             <div className="boxes">
             
               {data.projects.map((proj) => (
                 <div className="box" key={proj.url}>
                   
-                  <a href={proj.url} target="_blank" rel="noreferrer">
+                 
                     <div
                       className="showbox ">
                       <img
@@ -53,11 +53,10 @@ export const Landing = () => {
                         className="projimg"/>
                     </div>
                    
-                  </a>
+                  
                   <div className="hidbox">
-                    {proj.title}
-                    <br></br><br></br>
-                    <p id="ttt">
+                    <p className="header3">{proj.title}</p>
+                    <p id="projDesc">
                       {proj.description}
                       <br />
                       {proj.tools}

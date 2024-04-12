@@ -14,6 +14,7 @@
     "axios": "^1.6.2",
     "babel-plugin-macros": "^3.1.0",
     "nodemon": "^3.0.1",
+    "openai": "^4.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
@@ -25,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "nodemon start"
+    "dev": "nodemon start",
+    "build:prod": "REACT_APP_OPENAI_API_KEY=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 npm run build",
+    "start:prod": "REACT_APP_OPENAI_API_KEY=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 npm run start"
   },
   "eslintConfig": {
     "extends": [

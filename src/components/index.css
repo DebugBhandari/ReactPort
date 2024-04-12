@@ -4,17 +4,19 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 70vw;
-  position: relative;
+  width: 90vw;
+  position:sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #000000;
 }
 
 .button1 {
-  border: 3px solid #ffef08;
   padding: 6px 10px 6px 10px;
   font-weight: 900;
   border-radius: 8px;
-  color: white;
-  background-color: transparent;
+  color:#ffef08;
+  background-color: rgba(53, 55, 48, 0.5);
   min-width: 80px;
   font-family: Courier, monospace;
   text-decoration: none;
@@ -23,7 +25,7 @@
 }
 
 .button1:hover {
-  box-shadow: 0 0 10px 10px #ffef08;
+  scale: 1.1;
   color: #ffef08;
 }
 .button2 {
@@ -83,6 +85,10 @@
 .mbl-menu {
   font-size: 36px;
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*Lines Hamburger*/
@@ -256,25 +262,33 @@ i {
   flex-direction: row;
   justify-content: space-around;
   margin: 20px 20px 20px 20px;
+  color: #ffef08;
+  text-decoration: none;
+  
 }
 
 
 .logoDB:hover{
   scale:1.2;
   background-color:#ffef08;
+  border-radius: 50%;
+  opacity: 0.8;
   box-shadow:
-    0 0 120px 100px #ede58e, 
-    0 0 180px 120px rgb(223, 229, 139),
-    0 0 240px 200px rgb(246, 255, 0);
+  0 0 60px 50px #ede58e, 
+  0 0 90px 60px rgb(223, 229, 139),
+  0 0 120px 100px rgb(246, 255, 0);
 
 }
 .nav_bar:hover .logoDB {
-  animation: logoani 6s ease-out;
+  animation: logoani 2s ease-out;
   scale: 1.3;
   background-color: #ffef08;
   transform: rotate(90deg);
-  box-shadow: 0 0 40px 60px #ede58e, 0 0 90px 70px rgb(223, 229, 139),
-  0 0 120px 100px rgb(246, 255, 0);
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow:  0 0 60px 50px #ede58e, 
+  0 0 90px 60px rgb(223, 229, 139),
+  0 0 120px 100px rgb(246, 255, 0);;
 }
 
 .pp {
@@ -303,18 +317,17 @@ i {
 
   }
   25% {
-    transform:  translateX(-60px) scale(0.8) rotate(90deg);
+    transform:   scale(0.8) rotate(90deg);
   }
   50% {
-    transform:  translateX(60vw) scale(0.9) rotate(90deg);
+    transform:  scale(0.9) rotate(90deg);
   }
   75%{
-    transform: translateX(-60px)  scale(1) rotate(90deg);
+    transform:  scale(1) rotate(90deg);
   
   }
   100% {
-    transform: 
-   scale(1.2) rotate(90deg);
+    transform:  rotate(90deg);
    box-shadow: 0 0 40px 60px #ede58e, 0 0 90px 70px rgb(223, 229, 139),
    0 0 120px 100px rgb(246, 255, 0);
     
@@ -323,9 +336,10 @@ i {
 }
 
 .navbtns {
-  width: 300px;
+  width: 60vw;
   display: flex;
   justify-content: space-between;
+  margin-right: 50px;
 }
 
 /* Landing starts here ///////////////////////////////////////////////////////////////////////////////////////*/
@@ -349,7 +363,7 @@ i {
   margin: 10px;
 }
 .introSide {
-  min-height: 110vh;
+  min-height: 126vh;
   width: 40vw;
   min-width: 200px;
   background-color: rgb(27, 26, 26, 0.5);
@@ -369,7 +383,7 @@ i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40vw;
+  width: 44vw;
 }
 .boxes {
   display: flex;
@@ -390,49 +404,49 @@ i {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  
+  background-color:rgb(27, 26, 26, 0.8);
   margin: 20px;
-  font-size: 18px;
-  font-weight: 900;
+  font-size: 15px;
 }
 .showbox {
   height: 180px;
-  width: 180px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  flex-direction: row;
+  font-size: 16px;
+  flex-direction: column;
   flex-wrap: wrap;
   color: #ffef08;
 }
 
 .hidbox {
-  width: 280px;
-  height: 180px;
+  width: 300px;
+  height: 200px;
   display: none;
-  color: #ffef08;
-  padding: 18px;
+  color: #ffffff;
+  padding: 10px;
   overflow: scroll;
 }
 
 .boxes:hover .box {
   width: 100%;
   flex-direction: row;
-  margin: 6px;
+  margin: 10px;
+
 }
 .boxes:hover .hidbox {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: space-around;
   overflow: auto;
 }
 .boxes:hover .showbox{
   filter: saturate(3);
 }
 .box:hover {
-  box-shadow: 0 0 10px 10px #ffef08;
+  scale: 1.05;
 }
 .demoTxt {
   display: flex;
@@ -450,10 +464,17 @@ i {
 }
 
 .projimg  {
-  height: 200px;
+  height: 140px;
   width: 180px;
   object-fit:contain;
   aspect-ratio: 3/2;
+}
+
+.demo{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
 }
 /*cvpage  //////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -491,7 +512,7 @@ i {
   z-index: 1;
 }
 .schools {
-  box-shadow: 3px 3px #ffef08, -0.2em 0 0.2em #ede58e;
+  background-color: rgb(27, 26, 26, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -711,8 +732,8 @@ i {
 }
 
 /*Contact starts here---------------------------------------------------------------*/
-.contactmain {
-  min-height: 600px;
+.contactMain {
+  min-height: 500px;
   width: 90vw;
   display: flex;
   flex-direction: row;
@@ -769,10 +790,221 @@ i {
 }
 .formClass > input,
 textarea {
-  width: 200px;
   margin: 10px 0px 10px 0px;
   height: 30px;
+}
+
+
+/*------------- GPT Starts here -------------------------------------------------------*/
+
+
+.gptContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 80%;
+  min-height: 30vh;
+  background-color: #00000072;
+  margin: 60px 0 60px 0;
+}
+
+.gptBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+
+}
+.generated{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 76%;
+  min-height: 100px;
+  margin-bottom: 20px;
+  background-color:rgba(53, 55, 48, 0.5);
+  color: #000000;
+  font-size: 20px;
+  font-weight: 900;
+  z-index: 1;
+
+}
+
+
+.formClassChat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+
+}
+.message{
+  width: 70%;
+  height: 30px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(53, 55, 48, 0.5);
+  color: #ffef08;
+  border:none;
+
+}
+
+.user-message{
+  color:#ffef08;
+  font-weight: 200;
+}
+.bot-message{
+  color: #08ff0c;
+  font-weight: 200;
+}
+
+/* --------------------------------------todo--------------------------------------------- */
+.todolist{
+  width: 80vw;
+  display: flex;
+  align-items: center;
+ background-color: #00000074;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px 0 40px 0;
+}
+
+.todoInput{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+  padding: 0;
+  height: 80px;
+}
+.todos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #ffef08;
+  font-size: 20px;
+  font-weight: 900;
+  z-index: 1;
+  margin: 0;
+}
+#todoIn{
+  width: 80%;
+  height: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 900;
+  z-index: 1;
+  border-radius: 8px;
+
+}
+.todoBtns{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoBtn{
+  border: 1px solid #ffef08;
+  height: 30px;
+  min-width: 120px;
+  margin: 2px;
+}
+.todoMsg{
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+#todoUl{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  min-height: 40px;
+}
+
+
+/*---------------------------------pomodoro---------------------------------------------*/
+.pomo{
+  width: 80vw;
+  min-height: 100vh;
+  background-color: #00000074;
+  margin: 40px 0 40px 0;
+}
+
+.timerBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  color: #ffef08;
+  font-size: 20px;
+  font-weight: 900;
+  z-index: 1;
+  margin: 0 13%;
+}
+.timer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #ffef08;
+  font-size: 20px;
+  font-weight: 900;
+  z-index: 1;
+  margin: 0;
+}
+
+.doro{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+.timerMsg{
+  font-size: 100px;
+  font-weight: 900;
   background-color: #ffef08;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.timerBtns{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
 }
 
 @media screen and (max-width: 780px) {
@@ -825,7 +1057,7 @@ textarea {
     width: 180px;
     margin-top: 40px;
   }
-  #ttt {
+  #projDesc {
     text-align: center;
   }
   .boxes:hover .box {
@@ -837,24 +1069,27 @@ textarea {
     align-items: center;
     flex-direction: column;
     overflow: auto;
-    font-size: 16px;
+    font-size: 15px;
   }
   .footer-main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .contactmain {
+  .contactMain {
     flex-direction: column;
 
     height: 750px;
   }
-  .contact {
+  .contact, .gpt, .todolist {
     width: 90%;
   }
 
   .float {
     width: 250px;
     height: 220px;
+  }
+  .todoInput{
+    width: 90%;
   }
 }

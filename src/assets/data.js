@@ -19,9 +19,9 @@ export const data =
           "CSS",
           "SASS", "Tailwind", "Bootstrap", "Styled Components"
         ],
-        ["Node", "Express", "REST", "Oauth", "Lambda", "AWS API Gateway"],
+        ["Node", "Express", "REST", "Oauth", "Lambda", "AWS API Gateway", "Koa"],
         ["MongoDb", "Postgres", "SQL", "TypeORM"],
-        ["Java", "Android","Jest","Docker", "Route 53","Netlify","Heroku","Caddy","AWS EC2", "Git actions", "Bash Scripting"],
+        ["Java", "Android","Jest","Docker", "Route 53","AI/ML","Netlify","Heroku","Caddy","AWS EC2", "Git actions", "Bash Scripting"],
       
     ],
       "education": [

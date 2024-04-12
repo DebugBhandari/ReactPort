@@ -20,7 +20,6 @@ export const NavBar = () => {
   borderRadius: '10px'
   }
  
-  console.log(inValue);
   return (
     <div className="nav_bar">
       <div className="imgDiv">
@@ -45,9 +44,28 @@ export const NavBar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/ChatGPT" onClick={(e)=>inputHandler(e)}>
+                    {" "}
+                    GPT
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/TodoList" onClick={(e)=>inputHandler(e)}>
+                    {" "}
+                    Todo
+                  </Link>
+                </li>
+                <li>
                   <Link to="/Cv" onClick={(e)=>inputHandler(e)}>
                     {" "}
                     Edu.
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Pomodoro" onClick={(e)=>inputHandler(e)}>
+                    {" "}
+                    Pomodoro
                   </Link>
                 </li>
                 <li>
@@ -56,6 +74,8 @@ export const NavBar = () => {
                     Socials
                   </Link>
                 </li>
+               
+               
               </ul>
             </div>
           </div>
@@ -65,12 +85,23 @@ export const NavBar = () => {
         <Link to="/">
           <button className="button1">Landing</button>
         </Link>
+        <Link to="/ChatGPT">
+          <button className="button1">GPT</button>
+        </Link>
+        <Link to="/TodoList">
+          <button className="button1">Todo</button>
+        </Link>
         <Link to="/Cv">
           <button className="button1">Edu.</button>
         </Link>
+        <Link to="/Pomodoro">
+          <button className="button1">Pomodoro</button>
+        </Link>
+       
         <Link to="/Contact">
           <button className="button1">Socials</button>
         </Link>
+            
       </div>
     </div>
   );

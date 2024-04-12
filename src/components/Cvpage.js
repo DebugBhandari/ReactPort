@@ -19,7 +19,7 @@ export const Cvpage = () => {
         <button className="button1 button2">
           
           <a
-            href="https://drive.google.com/file/d/1GZqo7iC2lJeZWi-Np0Ns8AECnJhH7sds/view?usp=drive_link"
+            href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
           >
@@ -57,7 +57,7 @@ export const Cvpage = () => {
           {data.skills[2].join(", ")}
         </div>
         <div className="schools">
-          <h4 className="header3">Miscellaneous</h4>
+          <h4 className="header3">Others</h4>
           {data.skills[3].join(", ")}
         </div>
       </div>

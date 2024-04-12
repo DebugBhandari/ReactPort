@@ -39,13 +39,13 @@ export const Contact = () => {
       });
   };
   return (
-    <div className="contactmain"><div className="contact">
+    <div className="contactMain"><div className="contact">
       <h1 className="header1">Let's work together..</h1>
       <form onSubmit={handleOnSubmit} className="formClass">
         <label htmlFor="email">Email:</label>
-        <input id="email" type="email" name="email" required />
+        <input id="email" className="message" type="email" name="email" required />
         <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" className="message"  name="message"></textarea>
         <button className="button1"type="submit" disabled={serverState.submitting}>
           Submit
         </button>
