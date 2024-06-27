@@ -32,7 +32,7 @@ export const Contact = () => {
       data: new FormData(form)
     })
       .then(r => {
-        handleServerResponse(true, "Thanks!", form);
+        handleServerResponse(true, "Thank You. I will get back to you asap.", form);
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error, form);

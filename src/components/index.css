@@ -4,8 +4,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 90vw;
-  position:sticky;
+  position: sticky;
   top: 0;
   z-index: 10;
   background-color: #000000;
@@ -15,7 +14,7 @@
   padding: 6px 10px 6px 10px;
   font-weight: 900;
   border-radius: 8px;
-  color:#ffef08;
+  color: #ffef08;
   background-color: rgba(53, 55, 48, 0.5);
   min-width: 80px;
   font-family: Courier, monospace;
@@ -264,20 +263,15 @@ i {
   margin: 20px 20px 20px 20px;
   color: #ffef08;
   text-decoration: none;
-  
 }
 
-
-.logoDB:hover{
-  scale:1.2;
-  background-color:#ffef08;
+.logoDB:hover {
+  scale: 1.2;
+  background-color: #ffef08;
   border-radius: 50%;
   opacity: 0.8;
-  box-shadow:
-  0 0 60px 50px #ede58e, 
-  0 0 90px 60px rgb(223, 229, 139),
-  0 0 120px 100px rgb(246, 255, 0);
-
+  box-shadow: 0 0 60px 50px #ede58e, 0 0 90px 60px rgb(223, 229, 139),
+    0 0 120px 100px rgb(246, 255, 0);
 }
 .nav_bar:hover .logoDB {
   animation: logoani 2s ease-out;
@@ -286,16 +280,15 @@ i {
   transform: rotate(90deg);
   border-radius: 50%;
   opacity: 0.8;
-  box-shadow:  0 0 60px 50px #ede58e, 
-  0 0 90px 60px rgb(223, 229, 139),
-  0 0 120px 100px rgb(246, 255, 0);;
+  box-shadow: 0 0 60px 50px #ede58e, 0 0 90px 60px rgb(223, 229, 139),
+    0 0 120px 100px rgb(246, 255, 0);
 }
 
 .pp {
   height: 200px;
   width: 200px;
   border-radius: 100px;
-  filter: sepia(0.5)
+  filter: sepia(0.5);
 }
 
 .pp:hover {
@@ -303,35 +296,29 @@ i {
   box-shadow: 0 0 5px 10px #ffef08;
   filter: saturate(2);
 }
-.pp:hover .showbox{
+.pp:hover .showbox {
   filter: saturate(2);
 }
 @keyframes ppani {
-
 }
 
 @keyframes logoani {
   0% {
     transform: translateX(0px);
-   
-
   }
   25% {
-    transform:   scale(0.8) rotate(90deg);
+    transform: scale(0.8) rotate(90deg);
   }
   50% {
-    transform:  scale(0.9) rotate(90deg);
+    transform: scale(0.9) rotate(90deg);
   }
-  75%{
-    transform:  scale(1) rotate(90deg);
-  
+  75% {
+    transform: scale(1) rotate(90deg);
   }
   100% {
-    transform:  rotate(90deg);
-   box-shadow: 0 0 40px 60px #ede58e, 0 0 90px 70px rgb(223, 229, 139),
-   0 0 120px 100px rgb(246, 255, 0);
-    
-    
+    transform: rotate(90deg);
+    box-shadow: 0 0 40px 60px #ede58e, 0 0 90px 70px rgb(223, 229, 139),
+      0 0 120px 100px rgb(246, 255, 0);
   }
 }
 
@@ -339,7 +326,7 @@ i {
   width: 60vw;
   display: flex;
   justify-content: space-between;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 /* Landing starts here ///////////////////////////////////////////////////////////////////////////////////////*/
@@ -363,7 +350,7 @@ i {
   margin: 10px;
 }
 .introSide {
-  min-height: 126vh;
+  min-height: 100vh;
   width: 40vw;
   min-width: 200px;
   background-color: rgb(27, 26, 26, 0.5);
@@ -404,7 +391,7 @@ i {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  background-color:rgb(27, 26, 26, 0.8);
+  background-color: rgb(27, 26, 26, 0.8);
   margin: 20px;
   font-size: 15px;
 }
@@ -422,10 +409,9 @@ i {
 
 .hidbox {
   width: 300px;
-  height: 200px;
   display: none;
   color: #ffffff;
-  padding: 10px;
+  padding: 6px;
   overflow: scroll;
 }
 
@@ -433,16 +419,15 @@ i {
   width: 100%;
   flex-direction: row;
   margin: 10px;
-
 }
 .boxes:hover .hidbox {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: space-around;
+  align-items: center;
   overflow: auto;
 }
-.boxes:hover .showbox{
+.boxes:hover .showbox {
   filter: saturate(3);
 }
 .box:hover {
@@ -463,14 +448,14 @@ i {
   flex-direction: column;
 }
 
-.projimg  {
+.projimg {
   height: 140px;
   width: 180px;
-  object-fit:contain;
+  object-fit: contain;
   aspect-ratio: 3/2;
 }
 
-.demo{
+.demo {
   text-decoration: none;
   color: #ffffff;
   font-size: 18px;
@@ -483,8 +468,6 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
 }
 
 .nameme {
@@ -733,7 +716,7 @@ i {
 
 /*Contact starts here---------------------------------------------------------------*/
 .contactMain {
-  min-height: 500px;
+  min-height: 70vh;
   width: 90vw;
   display: flex;
   flex-direction: row;
@@ -794,9 +777,7 @@ textarea {
   height: 30px;
 }
 
-
 /*------------- GPT Starts here -------------------------------------------------------*/
-
 
 .gptContainer {
   display: flex;
@@ -816,9 +797,8 @@ textarea {
   align-items: center;
   margin: 20px;
   padding: 20px;
-
 }
-.generated{
+.generated {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -826,16 +806,14 @@ textarea {
   width: 76%;
   min-height: 100px;
   margin-bottom: 20px;
-  background-color:rgba(53, 55, 48, 0.5);
+  background-color: rgba(53, 55, 48, 0.5);
   color: #000000;
   font-size: 20px;
   font-weight: 900;
   z-index: 1;
-
 }
 
-
-.formClassChat{
+.formClassChat {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -843,94 +821,121 @@ textarea {
   width: 100%;
   height: 100%;
   margin-bottom: 20px;
-
 }
-.message{
+.message {
   width: 70%;
   height: 30px;
   margin: 20px;
   padding: 20px;
   background-color: rgba(53, 55, 48, 0.5);
   color: #ffef08;
-  border:none;
-
+  border: none;
 }
 
-.user-message{
-  color:#ffef08;
+.user-message {
+  color: #ffef08;
   font-weight: 200;
 }
-.bot-message{
+.bot-message {
   color: #08ff0c;
   font-weight: 200;
 }
 
-/* --------------------------------------todo--------------------------------------------- */
-.todolist{
+/* --------------------------------------randomPage--------------------------------------------- */
+.randomPage {
+  min-height: 70vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  background-color: rgb(27, 26, 26, 0.5);
+  z-index: 1;
+}
+.todolist {
   width: 80vw;
   display: flex;
   align-items: center;
- background-color: #00000074;
   flex-direction: column;
   justify-content: center;
   margin: 40px 0 40px 0;
 }
 
-.todoInput{
+.todoInput {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: #00000074;
+  width: 60%;
+  height: 100%;
+  padding: 6px;
+  height: 80px;
+  margin: 5%;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000074;
+  width: 60%;
+  min-height: 200px;
+  color: #ffef08;
+  font-size: 20px;
+  font-weight: 900;
+  z-index: 1;
+  padding: 20px;
+}
+.todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000074;
   width: 60%;
   height: 100%;
   padding: 0;
   height: 80px;
 }
-.todos{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#todoIn {
   width: 100%;
-  height: 100%;
-  padding: 20px;
-  color: #ffef08;
-  font-size: 20px;
-  font-weight: 900;
-  z-index: 1;
-  margin: 0;
-}
-#todoIn{
-  width: 80%;
   height: 20px;
   padding: 20px;
   font-size: 20px;
   font-weight: 900;
   z-index: 1;
   border-radius: 8px;
-
 }
-.todoBtns{
+.todoBtns {
   height: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
 }
 
-.todoBtn{
-  border: 1px solid #ffef08;
-  height: 30px;
-  min-width: 120px;
-  margin: 2px;
+.todoBtn {
+  margin: 8px;
 }
-.todoMsg{
+.todoBtn:hover {
+  scale: 1.1;
+  color: #ffef08;
+}
+.todoMsg {
   border-radius: 10px;
   font-size: 20px;
   font-weight: 900;
 }
 
-#todoUl{
+#addTodo {
+  font-size: xxx-large;
+  color: #ffef08;
+  font-weight: 900;
+}
+
+#todoUl {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -943,16 +948,15 @@ textarea {
   min-height: 40px;
 }
 
-
 /*---------------------------------pomodoro---------------------------------------------*/
-.pomo{
+.pomo {
   width: 80vw;
-  min-height: 100vh;
-  background-color: #00000074;
+  min-height: 70vh;
+  background-color: rgb(27, 26, 26, 0.5);
   margin: 40px 0 40px 0;
 }
 
-.timerBox{
+.timerBox {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -961,50 +965,52 @@ textarea {
   height: 100%;
   padding: 20px;
   color: #ffef08;
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 900;
   z-index: 1;
   margin: 0 13%;
 }
-.timer{
+.timer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
+  min-width: 100%;
+  min-height: 100px;
   color: #ffef08;
-  font-size: 20px;
   font-weight: 900;
   z-index: 1;
   margin: 0;
 }
 
-.doro{
+.doro {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-
 }
-.timerMsg{
-  font-size: 100px;
+.timerMsg {
+  font-size: 1em;
   font-weight: 900;
   background-color: #ffef08;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  max-width: 60px;
+  min-height: 60px;
+  border-radius: 30%;
   text-align: center;
+  font-size: 1em;
+  margin: 0 6%;
 }
 
-.timerBtns{
+.timerBtns {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: center;
+  width: 100%;
+}
+.timerBtn {
+  margin: 0 6%;
 }
 
 @media screen and (max-width: 780px) {
@@ -1019,10 +1025,13 @@ textarea {
   .schools,
   .contact,
   .social,
-  .float {
+  .float,
+  .todos,
+  .todo,
+  .footer-main {
     width: 86%;
   }
-  .introSide{
+  .introSide {
     min-height: 90vh;
   }
   .box {
@@ -1081,7 +1090,9 @@ textarea {
 
     height: 750px;
   }
-  .contact, .gpt, .todolist {
+  .contact,
+  .gpt,
+  .todolist {
     width: 90%;
   }
 
@@ -1089,7 +1100,7 @@ textarea {
     width: 250px;
     height: 220px;
   }
-  .todoInput{
+  .todoInput {
     width: 90%;
   }
 }

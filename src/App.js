@@ -10,7 +10,7 @@ import { Cvpage } from "./components/Cvpage";
 import { Contact } from "./components/Contact";
 
 import logo from "./assets/logoDB.png";
-import ChatGPT from "./components/ChatGPT"; // Import the ChatGPT component
+//import ChatGPT from "./components/ChatGPT"; // Import the ChatGPT component
 import Pomodoro from "./components/Pomodoro";
 import TodoList from "./components/TodoList";
 
@@ -23,15 +23,17 @@ function App() {
         <JsonContext.Provider value={data}>
           <NavBar />
           <div className="glowBoy"></div>
+          <div className="app-body">
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/CV" element={<Cvpage />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="/ChatGPT" element={<ChatGPT />} /> 
+            {/* <Route path="/ChatGPT" element={<ChatGPT />} />  */}
             <Route path="/Pomodoro" element={<Pomodoro />} />
             <Route path="/TodoList" element={<TodoList />} />
 
           </Routes>
+          </div>
           <Footer />
         </JsonContext.Provider>
       </BrowserRouter>

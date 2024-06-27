@@ -27,7 +27,7 @@ function Board({ xIsNext, squares, onPlay, setStat }) {
   let status;
   if (winner) {
     status = "Winner: " + winner;
-  } else if (!winner && squares[8] !== null) {
+  } else if (!winner && !squares.includes(null)) {
     status = "Its a tie";
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
