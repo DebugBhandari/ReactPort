@@ -1,35 +1,39 @@
-name: CD React Portfolio
+name: React Portfolio
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main"  branch
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checkout the code
       - uses: actions/checkout@v3
 
+      # Install Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # or another version matching your project needs
 
-        
+      # Install dependencies and build the project
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build # Ensure this creates the `dist/` directory
+
+      # Deploy to the server
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: "dist/"
+          SOURCE: "dist/"  # Ensure this matches the build directory
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/.github/, /node_modules/, /public /, / src/, /package.json /, / package-lock.json/, / Readme.md/"
+          EXCLUDE: ".github,node_modules,public,src,package.json,package-lock.json,Readme.md"
