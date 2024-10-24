@@ -15,18 +15,6 @@ jobs:
       # Checkout the code
       - uses: actions/checkout@v3
 
-      # Install Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16' # or another version matching your project needs
-
-      # Install dependencies and build the project
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build
-
       # Deploy to the server
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
