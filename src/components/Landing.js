@@ -27,9 +27,9 @@ export const Landing = () => {
             </p>
             <br></br>
             <br></br>
-            <Link to="/Contact">
+            <a href="#contact">
               <button className="button1">Lets Collaborate</button>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="projSide">
