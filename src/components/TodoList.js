@@ -52,7 +52,7 @@ const TodoList = () => {
   };
 
   return (
-    <div className="randomPage">
+    <div className="randomPage" id="todoList">
       <div className="tic">
         <div className="tac header1">TicTacToe!!!</div>
         <div className="toe">
@@ -95,7 +95,7 @@ const TodoList = () => {
                     textDecoration: todo.completed ? "line-through" : "none",
                     backgroundColor: todo.completed
                       ? " #d74747"
-                      : "rgba(53, 55, 48, 0.5)",
+                      : "rgba(53, 55, 48, 0.5)"
                   }}
                 />
                 <div className="todoBtns">

@@ -21,18 +21,25 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <JsonContext.Provider value={data}>
-          <NavBar />
           <div className="glowBoy"></div>
+          <NavBar />
           <div className="app-body">
-          <Routes>
+            {/* <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/CV" element={<Cvpage />} />
             <Route path="/Contact" element={<Contact />} />
-            {/* <Route path="/ChatGPT" element={<ChatGPT />} />  */}
             <Route path="/Pomodoro" element={<Pomodoro />} />
             <Route path="/TodoList" element={<TodoList />} />
 
-          </Routes>
+          </Routes> */}
+
+            <Landing />
+            <Cvpage />
+
+            <Pomodoro />
+            <TodoList />
+            <Contact />
+            {/* <ChatGPT /> */}
           </div>
           <Footer />
         </JsonContext.Provider>

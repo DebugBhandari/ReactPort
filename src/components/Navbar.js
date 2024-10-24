@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logoDB.png";
+import "../App.css";
 
 import "./index.css";
 // import { ProfileHover } from "./ProfileHover";
@@ -7,16 +8,15 @@ import "./index.css";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
+  const imgStyle = {
+    width: "60px",
+    height: "50px",
+    borderRadius: "10px"
+  };
   const [inValue, setInValue] = useState(false);
 
   const inputHandler = (e) => {
     setInValue(!inValue);
-  };
-
-  const imgStyle = {
-    width: "60px",
-    height: "50px",
-    borderRadius: "10px",
   };
 
   return (
@@ -43,40 +43,30 @@ export const NavBar = () => {
             <div className="mbl-menu header1">
               <ul>
                 <li>
-                  <Link to="/" onClick={(e) => inputHandler(e)}>
-                    Landing{" "}
-                  </Link>
+                  <a href="#landing" onClick={(e) => inputHandler(e)}>
+                    Landing
+                  </a>
                 </li>
                 <li>
-                  <Link to="/Cv" onClick={(e) => inputHandler(e)}>
-                    {" "}
+                  <a href="#cvPage" onClick={(e) => inputHandler(e)}>
                     Edu.
-                  </Link>
+                  </a>
                 </li>
-                {/* <li>
-                  <Link to="/ChatGPT" onClick={(e)=>inputHandler(e)}>
-                    {" "}
-                    GPT
-                  </Link>
-                </li> */}
 
                 <li>
-                  <Link to="/Pomodoro" onClick={(e) => inputHandler(e)}>
-                    {" "}
+                  <a href="#pomo" onClick={(e) => inputHandler(e)}>
                     Pomodoro
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/TodoList" onClick={(e) => inputHandler(e)}>
-                    {" "}
+                  <a href="#todoList" onClick={(e) => inputHandler(e)}>
                     PlayGround
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/Contact" onClick={(e) => inputHandler(e)}>
-                    {" "}
+                  <a href="#contact" onClick={(e) => inputHandler(e)}>
                     Socials
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -84,25 +74,22 @@ export const NavBar = () => {
         </div>
       </div>
       <div className="navbtns">
-        <Link to="/">
+        <a href="#landing">
           <button className="button1">Landing</button>
-        </Link>
-        {/* <Link to="/ChatGPT">
-          <button className="button1">GPT</button>
-        </Link> */}
+        </a>
 
-        <Link to="/Cv">
+        <a href="#cvPage">
           <button className="button1">Edu.</button>
-        </Link>
-        <Link to="/Pomodoro">
+        </a>
+        <a href="#pomo">
           <button className="button1">Pomodoro</button>
-        </Link>
-        <Link to="/TodoList">
+        </a>
+        <a href="#todoList">
           <button className="button1">PlayGround</button>
-        </Link>
-        <Link to="/Contact">
+        </a>
+        <a href="#contact">
           <button className="button1">Socials</button>
-        </Link>
+        </a>
       </div>
     </div>
   );

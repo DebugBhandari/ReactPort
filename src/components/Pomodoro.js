@@ -36,7 +36,9 @@ export default function Pomodoro() {
   useEffect(() => {
     if (hasFinished) {
       axios
-        .get("https://v2.jokeapi.dev/joke/Any")
+        .get(
+          "https://v2.jokeapi.dev/joke/Any?blacklistFlags=racist,sexist,explicit"
+        )
         .then((response) => {
           if (response.data.type === "single") {
             setJoke(response.data.joke);
@@ -53,9 +55,9 @@ export default function Pomodoro() {
     }
   }, [hasFinished]);
   return (
-    <div className="pomo">
+    <div className="pomo" id="pomo">
       <h2 className="header1">Pomodoro.</h2>
-      <h2 className="header2">Hit a lap and get a chuckle.</h2>
+      <h2 className="header3">Hit a lap and get a chuckle.</h2>
       <p>
         Set your timer and start working. When the timer ends, you get a joke.
       </p>

@@ -6,7 +6,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 export const Cvpage = () => {
   const data = useContext(JsonContext);
   return (
-    <div className="cvPage">
+    <div className="cvPage" id="cvPage">
       <div className="introdiv"> </div>
 
       <div className="typewriter">
@@ -17,9 +17,8 @@ export const Cvpage = () => {
 
       <div className="cv-row">
         <button className="button1 button2">
-          
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1j_Q1ZideI58NwoyF_0wBmX0vTkVJ-hJn/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
@@ -27,17 +26,15 @@ export const Cvpage = () => {
           </a>
         </button>
         <button className="button1 button2">
-          
           <a
             href="https://www.credly.com/badges/8b97c288-ebb2-4dcf-87a6-724daa2717b9/linked_in"
             target="_blank"
             rel="noreferrer"
           >
-              <FontAwesomeIcon
-                className="faIcon2"
-                icon={icon({ name: "aws", style: "brands" })}
-              />
-            
+            <FontAwesomeIcon
+              className="faIcon2"
+              icon={icon({ name: "aws", style: "brands" })}
+            />
           </a>
         </button>
       </div>
@@ -63,7 +60,6 @@ export const Cvpage = () => {
       </div>
       <div className="cvsec">
         <h2 className="header2">Education:</h2>
-
         {data.education.map((schools) => (
           <div className="schools" key={schools.title}>
             <h4 className="header3">{schools.organization}</h4>
@@ -72,7 +68,7 @@ export const Cvpage = () => {
               {schools.title + " " + schools.address + " " + schools.graduation}
             </p>
           </div>
-        ))}
+        ))}{" "}
       </div>
     </div>
   );

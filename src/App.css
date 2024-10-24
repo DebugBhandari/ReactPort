@@ -1,50 +1,54 @@
- body {
+body {
   background-color: rgb(2, 2, 2);
-  
+
   color: white;
-  font-family:  Courier, monospace;
+  font-family: Courier, monospace;
   text-align: center;
-  
+
   flex-direction: column;
-  
+  width: 100vw;
   font-size: 18px;
-
-
-
 }
-.App{
-  height: 100%;
-  width: 100%;
+.App {
+  width: 100dvw;
 
-  animation: appSlide 1s ease-in-out;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.app-body{
+.app-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 5%;
+  max-width: 1280px;
+  overflow-y: scroll;
 }
 @keyframes appSlide {
-  from{transform: translateY(-90%);}
-  to{transform: translateY(0%);
- }
+  from {
+    transform: translateY(-90%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 .glowBoy {
-  position: fixed;
-  top: 80%;
-  left: 80%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: #ffffff;
   z-index: -50;
   opacity: 70%;
-  box-shadow:
-    0 0 60px 50px #ede58e, 
-    0 0 90px 60px rgb(223, 229, 139),
+  box-shadow: 0 0 60px 50px #ede58e, 0 0 90px 60px rgb(223, 229, 139),
     0 0 120px 100px rgb(246, 255, 0);
+  animation-name: enlargeAnimation;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-direction: alternate;
+  animation-timeline: scroll(block nearest);
 }
 
 .button1 {
@@ -55,19 +59,16 @@
   color: #ffef08;
   background-color: transparent;
   min-width: 80px;
-  font-family:  Courier, monospace;
+  font-family: Courier, monospace;
   text-decoration: none;
-
 }
 
-
-.button1:hover{
- scale: 1.1;
+.button1:hover {
+  scale: 1.1;
   color: #ffef08;
 }
 
-
-.logoBG{
+.logoBG {
   /* background: url("./assets/logoDB.png");
   background-size: cover;
   z-index: -9;
@@ -79,4 +80,13 @@
   bottom: 0%;
   right: 15%; */
   display: none;
+}
+
+@keyframes enlargeAnimation {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(20) rotate(360deg);
+  }
 }
