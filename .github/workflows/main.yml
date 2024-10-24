@@ -24,4 +24,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: ".github,node_modules,public,src,package.json,package-lock.json,Readme.md"
+          EXCLUDE: ".github,node_modules,public,src,package.json,package-lock.json,Readme.md,.gitignore,.gitattributes,.git,src"
