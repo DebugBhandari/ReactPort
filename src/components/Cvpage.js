@@ -2,17 +2,20 @@ import React, { useContext } from "react";
 import { JsonContext } from "../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { InView } from "react-intersection-observer";
+import "./index.css"; // Ensure animations and CSS styles are defined here
 
 export const Cvpage = () => {
   const data = useContext(JsonContext);
+
   return (
     <div className="cvPage" id="cvPage">
       <div className="introdiv"> </div>
 
       <div className="typewriter">
-        <p> {data.name}, Metropolia UAS,</p>
-        <p> {data.education[1].title} Web/UX Dev 🇳🇵🇫🇮</p>
-        <p> BhandariDeepakDev@gmail.com</p>
+        <p>{data.name}, Metropolia UAS,</p>
+        <p>{data.education[1].title} Web/UX Dev 🇳🇵🇫🇮</p>
+        <p>BhandariDeepakDev@gmail.com</p>
       </div>
 
       <div className="cv-row">
@@ -39,36 +42,48 @@ export const Cvpage = () => {
         </button>
       </div>
 
+      {/* Skills Section with Individual Skills Animation */}
       <div className="cvsec">
         <h2 className="header2">Skills:</h2>
-        <div className="schools">
-          <h4 className="header3">Frontend</h4>
-          {data.skills[0].join(", ")}
-        </div>
-        <div className="schools">
-          <h4 className="header3">Backend</h4>
-          {data.skills[1].join(", ")}
-        </div>
-        <div className="schools">
-          <h4 className="header3">Databases</h4>
-          {data.skills[2].join(", ")}
-        </div>
-        <div className="schools">
-          <h4 className="header3">Others</h4>
-          {data.skills[3].join(", ")}
-        </div>
+        {data.skills.map((category, index) => (
+          <InView key={index} threshold={1}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className={`schools ${inView ? "fade-in" : "hidden"}`}
+              >
+                <h4 className="header3">
+                  {["Frontend", "Backend", "Databases", "Others"][index]}
+                </h4>
+                <p>{category.join(", ")}</p>
+              </div>
+            )}
+          </InView>
+        ))}
       </div>
+
+      {/* Education Section with Individual School Animation */}
       <div className="cvsec">
         <h2 className="header2">Education:</h2>
-        {data.education.map((schools) => (
-          <div className="schools" key={schools.title}>
-            <h4 className="header3">{schools.organization}</h4>
-
-            <p>
-              {schools.title + " " + schools.address + " " + schools.graduation}
-            </p>
-          </div>
-        ))}{" "}
+        {data.education.map((school) => (
+          <InView key={school.title} threshold={1}>
+            {({ inView, ref }) => (
+              <div
+                ref={ref}
+                className={`schools ${inView ? "fade-in" : "hidden"}`}
+              >
+                <h4 className="header3">{school.organization}</h4>
+                <p>
+                  {school.title +
+                    " " +
+                    school.address +
+                    " " +
+                    school.graduation}
+                </p>
+              </div>
+            )}
+          </InView>
+        ))}
       </div>
     </div>
   );

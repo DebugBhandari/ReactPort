@@ -480,15 +480,12 @@ i {
 
 .boxes:hover .box {
   width: 100%;
-  flex-direction: row;
-  margin: 10px;
 }
 .boxes:hover .hidbox {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
 }
 .boxes:hover .showbox {
   filter: saturate(3);
@@ -504,11 +501,9 @@ i {
 .demoTxt {
   display: flex;
 }
-
 .projSide:hover .demoTxt {
   display: none;
 }
-
 .myDesc {
   display: flex;
   justify-content: center;
@@ -552,6 +547,7 @@ i {
   width: 100%;
   z-index: -1;
 }
+
 .cv-row {
   display: flex;
   flex-direction: row;
@@ -576,6 +572,20 @@ i {
   padding: 10px;
   flex-wrap: wrap;
   z-index: -1;
+}
+
+/* Default hidden state for fade-in animation */
+.hidden {
+  opacity: 0;
+  transform: translateX(10px); /* Slide in from below */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Visible state for fade-in animation */
+.fade-in {
+  opacity: 1;
+  transform: translateX(0); /* Animate to original position */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* typewritwerrr */
@@ -794,7 +804,7 @@ i {
 /*Contact starts here---------------------------------------------------------------*/
 .contactMain {
   min-height: 70vh;
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -921,7 +931,7 @@ textarea {
 /* --------------------------------------randomPage--------------------------------------------- */
 .randomPage {
   min-height: 70vh;
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1027,7 +1037,7 @@ textarea {
 
 /*---------------------------------pomodoro---------------------------------------------*/
 .pomo {
-  width: 100%;
+  width: 70%;
   min-height: 40vh;
   background-color: #9f9c762e;
   margin: 40px 0 40px 0;
@@ -1104,6 +1114,7 @@ textarea {
   .introSide,
   .schools,
   .contact,
+  .contactMain,
   .social,
   .float,
   .todos,
@@ -1121,7 +1132,7 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 280px;
+    min-height: 380px;
     justify-content: space-around;
     width: 100%;
     padding: 8px;
@@ -1136,6 +1147,7 @@ textarea {
 
   .projSide {
     width: 90%;
+    margin-bottom: 100px;
   }
   .hidbox {
     display: flex;
@@ -1145,23 +1157,12 @@ textarea {
     width: 100%;
   }
   .showbox {
-    height: 180px;
+    height: 100px;
     width: 180px;
     margin-top: 40px;
   }
   #projDesc {
     text-align: center;
-  }
-  .boxes:hover .box {
-    flex-direction: column;
-  }
-  .boxes:hover .hidbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: auto;
-    font-size: 15px;
   }
 
   .footer-main {
